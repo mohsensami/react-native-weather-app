@@ -8,6 +8,7 @@ import { CalendarDaysIcon, MapPinIcon } from 'react-native-heroicons/solid';
 export default function HomeScreen() {
     const [showSearch, toggleSearch] = useState(false);
     const [locations, setLocations] = useState([1, 2, 3]);
+    const [weather, setWeather] = useState({});
     const handleLocation = (loc) => {
         console.log('handleLocation');
     };
@@ -108,7 +109,7 @@ export default function HomeScreen() {
                 </View>
 
                 {/* forecast for next days */}
-                {/* <View className="mb-2 space-y-3">
+                <View className="mb-2 space-y-3">
                     <View className="flex-row items-center mx-5 space-x-2">
                         <CalendarDaysIcon size="22" color="white" />
                         <Text className="text-white text-base">Daily forecast</Text>
@@ -143,7 +144,7 @@ export default function HomeScreen() {
                             );
                         })}
                     </ScrollView>
-                </View> */}
+                </View>
             </SafeAreaView>
         </View>
     );
